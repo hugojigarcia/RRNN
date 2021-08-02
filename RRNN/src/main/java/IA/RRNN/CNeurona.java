@@ -15,8 +15,9 @@ public class CNeurona {
 		neuronas = new ArrayList<>();
 	}
 	
-	public void crear(double bias) {
+	public Neurona crear(double bias) {
 		//TODO
+		return null;
 	}
 	
 	public Neurona get(int numNeurona) {

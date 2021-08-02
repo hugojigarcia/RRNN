@@ -20,8 +20,9 @@ public class CCapa {
 		sumidero.asignarAnterior(generador);
 	}
 	
-	public void crear(int numNeuronas, IFuncion funcion) {
+	public Capa crear(int numNeuronas, IFuncion funcion) {
 		//TODO
+		return null;
 	}
 	
 	public Capa get(int numCapa) {
