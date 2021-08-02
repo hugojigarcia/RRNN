@@ -3,32 +3,28 @@
 //  @ Author :  Hugo
 
 
-package IA.RRNN.PFuncion;
+package PFuncion;
 
 
-public class Funcion implements IFuncion {
-	
+public class Funcion implements PFuncion.IFuncion {
 	private IFuncion INSTANCE;
-	private Funcion() {}
-	public IFuncion getInstance() { return INSTANCE; }
+	public IFuncion getInstance() {
+	
+	}
 	
 	public double aplicarFuncion(double valor) {
-		//TODO
-		return 0;
+	
 	}
 	
 	public double[] aplicarFuncion(double[] valores) {
-		//TODO
-		return null;
+	
 	}
 	
 	public double aplicarDerivada(double valor) {
-		//TODO
-		return 0;
+	
 	}
 	
 	public double[] aplicarDerivada(double[] valores) {
-		//TODO
-		return null;
+	
 	}
 }

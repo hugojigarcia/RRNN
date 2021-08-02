@@ -1,5 +1,3 @@
-package IA.RRNN;
-
 //  @ Project : RRNN
 //  @ File Name : CNeurona.java
 //  @ Author :  Hugo
@@ -8,6 +6,22 @@ package IA.RRNN;
 
 public class CNeurona {
 	public void crear(double bias) {
-		//TODO
+	
+	}
+	
+	public Neurona get(int numNeurona) {
+	
+	}
+	
+	public Neurona borrarUltimaNeurona() {
+	
+	}
+	
+	public double[] getSalida(double[] entradas) {
+	
+	}
+	
+	public double[] retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje) {
+	
 	}
 }

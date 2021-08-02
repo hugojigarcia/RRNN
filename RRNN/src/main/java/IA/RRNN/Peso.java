@@ -1,5 +1,3 @@
-package IA.RRNN;
-
 //  @ Project : RRNN
 //  @ File Name : Peso.java
 //  @ Author :  Hugo
@@ -8,7 +6,7 @@ package IA.RRNN;
 
 public class Peso {
 	private double peso;
-	//TODO constructor
+	public double getPeso() {
 	
-	public double getPeso() { return peso; }
+	}
 }
