@@ -1,3 +1,7 @@
+package IA.RRNN;
+
+import IA.RRNN.PFuncion.IFuncion;
+
 //  @ Project : RRNN
 //  @ File Name : Capa.java
 //  @ Author :  Hugo
@@ -6,27 +10,37 @@
 
 public class Capa extends CapaBase {
 	private int numCapa;
-	public void new(int numNeuronas, PFuncion.IFuncion funcion, int numCapa) {
-	
+	private CapaBase anterior, siguiente;
+	private CNeurona cNeurona;
+	public Capa(int numCapa, int numNeuronas, IFuncion funcion, CapaBase anterior, CapaBase siguiente) {
+		//TODO
+		this.numCapa=numCapa;
+		this.anterior = anterior;
+		this.siguiente = siguiente;
+		cNeurona = new CNeurona();
 	}
 	
-	public int getNumCapa() {
+	public int getNumCapa() { return numCapa; }
 	
-	}
-	
+	@Override
 	public double[] getSalida(double[] entradas) {
-	
+		//TODO
+		return null;
 	}
 	
+	@Override
 	public double[] retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje) {
-	
+		//TODO
+		return null;
 	}
 	
-	public double[] getSalida(double[] entradas) {
-	
-	}
-	
-	public double[] retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje) {
-	
-	}
+	//RELACIÓN CAPA-CAPABASE(anterior)
+	public void asignarAnterior(CapaBase anterior) { if(anterior!=null) this.anterior=anterior; }
+	public CapaBase obtenerAnterior() { return anterior; }
+	//RELACIÓN GENERADOR-CAPABASE(siguiente)
+	public void asignarSiguiente(CapaBase siguiente) { if(siguiente!=null) this.siguiente=siguiente; }
+	public CapaBase obtenerSiguiente() { return siguiente; }
+	//RELACIÓN CAPA-CNEURONA
+	public void asignarCNeurona(CNeurona cNeurona) { if(cNeurona!=null) this.cNeurona=cNeurona; }
+	public CNeurona obtenerCNeurona() { return cNeurona; }
 }

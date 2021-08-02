@@ -1,3 +1,5 @@
+package IA.RRNN;
+
 //  @ Project : RRNN
 //  @ File Name : CapaBase.java
 //  @ Author :  Hugo

@@ -3,27 +3,16 @@
 //  @ Author :  Hugo
 
 
-package PPersistencia;
+package IA.RRNN.PPersistencia;
 
+import IA.RRNN.Red;
 
-public class IPersistenciaRed {
-	public IPersistenciaRed getInstance() {
+public interface IPersistenciaRed {
+	public void create(Red red);
 	
-	}
+	public Red read(String nombre);
 	
-	public void create(Red red) {
+	public void update(Red red);
 	
-	}
-	
-	public Red read(String nombre) {
-	
-	}
-	
-	public void update(Red red) {
-	
-	}
-	
-	public void delete(String nombre) {
-	
-	}
+	public void delete(String nombre);
 }
