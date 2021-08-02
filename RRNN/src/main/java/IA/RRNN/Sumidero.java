@@ -25,6 +25,13 @@ public class Sumidero extends CapaBase {
 	}
 	
 	//RELACIÓN SUMIDERO-CAPABASE(anterior)
+	@Override
 	public void asignarAnterior(CapaBase anterior) { if(anterior!=null) this.anterior=anterior; }
+	@Override
 	public CapaBase obtenerAnterior() { return anterior; }
+	@Override
+	public void asignarSiguiente(CapaBase siguiente) {	}
+
+	@Override
+	public CapaBase obtenerSiguiente() { return this; }
 }

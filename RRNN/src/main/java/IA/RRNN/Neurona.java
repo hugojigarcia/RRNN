@@ -11,22 +11,18 @@ import IA.RRNN.PFuncion.IFuncion;
 
 
 public class Neurona {
-	private int numNeurona;
 	private double bias;
 	private ArrayList<Peso> anteriores;
 	private ArrayList<Peso> siguientes;
 	private IFuncion funcion;
 	
-	public Neurona(int numNeurona, IFuncion funcion, double bias) {
+	public Neurona(double bias, IFuncion funcion) {
 		//TODO bias
-		this.numNeurona = numNeurona;
 		this.funcion=funcion;
 		this.bias = bias;
 		anteriores = new ArrayList<>();
 		siguientes = new ArrayList<>();
 	}
-	
-	public int getNumNeurona() { return numNeurona; }
 	
 	public double getBias() { return bias; }
 	

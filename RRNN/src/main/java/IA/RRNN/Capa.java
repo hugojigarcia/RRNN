@@ -9,18 +9,14 @@ import IA.RRNN.PFuncion.IFuncion;
 
 
 public class Capa extends CapaBase {
-	private int numCapa;
 	private CapaBase anterior, siguiente;
 	private CNeurona cNeurona;
-	public Capa(int numCapa, int numNeuronas, IFuncion funcion, CapaBase anterior, CapaBase siguiente) {
+	public Capa(int numNeuronas, IFuncion funcion, CapaBase anterior, CapaBase siguiente) {
 		//TODO
-		this.numCapa=numCapa;
 		this.anterior = anterior;
 		this.siguiente = siguiente;
 		cNeurona = new CNeurona();
 	}
-	
-	public int getNumCapa() { return numCapa; }
 	
 	@Override
 	public double[] getSalida(double[] entradas) {
