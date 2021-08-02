@@ -6,15 +6,14 @@
 package IA.RRNN.PFuncion;
 
 
-public class Funcion implements IFuncion {
+public class FuncionSigmoidal implements IFuncion {
 	//SINGLETON
-	private final static IFuncion INSTANCE = new Funcion();
+	private final static IFuncion INSTANCE = new FuncionSigmoidal();
 	public static IFuncion getInstance() { return INSTANCE; }
-	private Funcion() {}
+	private FuncionSigmoidal() {}
 	
 	public double aplicarFuncion(double valor) {
-		//TODO
-		return 0;
+		return 1/(1+ Math.pow(Math.E, -valor));
 	}
 	
 	public double[] aplicarFuncion(double[] valores) {
@@ -24,8 +23,7 @@ public class Funcion implements IFuncion {
 	}
 	
 	public double aplicarDerivada(double valor) {
-		//TODO
-		return 0;
+		return aplicarFuncion(valor)*(1-aplicarFuncion(valor));
 	}
 	
 	public double[] aplicarDerivada(double[] valores) {

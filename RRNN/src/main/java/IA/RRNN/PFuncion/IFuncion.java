@@ -7,11 +7,11 @@ package IA.RRNN.PFuncion;
 
 
 public interface IFuncion {
-	public double aplicarFuncion(double valor);
+	public double aplicarFuncion(double valor) throws Exception;
 	
-	public double[] aplicarFuncion(double[] valores);
+	public double[] aplicarFuncion(double[] valores) throws Exception;
 	
-	public double aplicarDerivada(double valor);
+	public double aplicarDerivada(double valor) throws Exception;
 	
-	public double[] aplicarDerivada(double[] valores);
+	public double[] aplicarDerivada(double[] valores) throws Exception;
 }

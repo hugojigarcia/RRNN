@@ -6,15 +6,14 @@
 package IA.RRNN.PFuncion;
 
 
-public class Funcion implements IFuncion {
+public class FuncionEscalon implements IFuncion {
 	//SINGLETON
-	private final static IFuncion INSTANCE = new Funcion();
+	private final static IFuncion INSTANCE = new FuncionEscalon();
 	public static IFuncion getInstance() { return INSTANCE; }
-	private Funcion() {}
+	private FuncionEscalon() {}
 	
 	public double aplicarFuncion(double valor) {
-		//TODO
-		return 0;
+		return valor>0?1:0;
 	}
 	
 	public double[] aplicarFuncion(double[] valores) {
@@ -23,12 +22,11 @@ public class Funcion implements IFuncion {
 		return resultado;
 	}
 	
-	public double aplicarDerivada(double valor) {
-		//TODO
-		return 0;
+	public double aplicarDerivada(double valor) throws Exception {
+		throw new Exception("La función de activación escalón no tiene derivada");
 	}
 	
-	public double[] aplicarDerivada(double[] valores) {
+	public double[] aplicarDerivada(double[] valores) throws Exception {
 		double[] resultado = new double[valores.length];
 		for(int i=0;i<valores.length;i++) resultado[i] = this.aplicarDerivada(valores[i]);
 		return resultado;
