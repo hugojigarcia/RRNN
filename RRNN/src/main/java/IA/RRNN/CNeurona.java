@@ -16,11 +16,13 @@ public class CNeurona {
 		neuronas = new ArrayList<>();
 	}
 	
-	public Neurona crear(double bias, IFuncion funcion) {
+	public Neurona crear(double bias, IFuncion funcion, ArrayList<Neurona> anteriores, ArrayList<Neurona> siguientes) {
+		//TODO ver como se asigna el peso
 		Neurona neurona = new Neurona(bias,funcion);
+		for(Neurona anterior:anteriores) neurona.aniadirAnterior(new Peso(0, anterior, neurona));
+		for(Neurona siguiente:siguientes) neurona.aniadirSiguiente(new Peso(0, neurona, siguiente));
 		neuronas.add(neurona);
 		return neurona;
-		//TODO siguientes, anterior
 	}
 	
 	public Neurona get(int numNeurona) throws Exception {

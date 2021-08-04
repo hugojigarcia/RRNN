@@ -13,9 +13,9 @@ public class Capa extends CapaBase {
 	private CNeurona cNeurona;
 	public Capa(int numNeuronas, IFuncion funcion, CapaBase anterior, CapaBase siguiente) {
 		//TODO
-		this.anterior = anterior;
-		this.siguiente = siguiente;
 		cNeurona = new CNeurona();
+		asignarAnterior(anterior);
+		asignarSiguiente(siguiente);
 	}
 	
 	@Override
@@ -31,8 +31,14 @@ public class Capa extends CapaBase {
 	}
 	
 	//RELACIÓN CAPA-CAPABASE(anterior)
-	public void asignarAnterior(CapaBase anterior) { if(anterior!=null) this.anterior=anterior; }
+	public void asignarAnterior(CapaBase anterior) { 
+		if(anterior!=null) {
+			this.anterior=anterior;
+			
+		}
+	}
 	public CapaBase obtenerAnterior() { return anterior; }
+	
 	//RELACIÓN GENERADOR-CAPABASE(siguiente)
 	public void asignarSiguiente(CapaBase siguiente) { if(siguiente!=null) this.siguiente=siguiente; }
 	public CapaBase obtenerSiguiente() { return siguiente; }
