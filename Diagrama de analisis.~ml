@@ -2151,18 +2151,13 @@
 <XPD:OBJ name="Operations[0]" type="UMLOperation" guid="lvUJM0B1XUSypRIiufKNxwAA">
 <XPD:ATTR name="Name" type="string">new</XPD:ATTR>
 <XPD:REF name="Owner">XGDIgpxeHkiMuuMzQ/GGXwAA</XPD:REF>
-<XPD:ATTR name="#Parameters" type="integer">3</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="Vob1iM3VFEaVOIyRyY4XKwAA">
-<XPD:ATTR name="Name" type="string">numCapa</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
-<XPD:REF name="BehavioralFeature">lvUJM0B1XUSypRIiufKNxwAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="rhCRLJt9bEixpcn0l3FspwAA">
+<XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="GFc7b15aV0W5dnohMs9c6QAA">
 <XPD:ATTR name="Name" type="string">numNeuronas</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">lvUJM0B1XUSypRIiufKNxwAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="+dOvlM7rmU2tikSrtoVxJAAA">
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="KBJbAlwybUKP4GXyuZH+mwAA">
 <XPD:ATTR name="Name" type="string">funcion</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">lvUJM0B1XUSypRIiufKNxwAA</XPD:REF>
 <XPD:REF name="Type_">pePioy7rQUC9zg2M6tG25wAA</XPD:REF>
@@ -2341,21 +2336,16 @@
 <XPD:OBJ name="Operations[0]" type="UMLOperation" guid="Liv5h/uS4kuErD22ydi1FQAA">
 <XPD:ATTR name="Name" type="string">new</XPD:ATTR>
 <XPD:REF name="Owner">mOa5yMZGREC1SnUEY3lhagAA</XPD:REF>
-<XPD:ATTR name="#Parameters" type="integer">3</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="ys0h9MYKJ0218AXWHeGAPwAA">
-<XPD:ATTR name="Name" type="string">numNeurona</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
-<XPD:REF name="BehavioralFeature">Liv5h/uS4kuErD22ydi1FQAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="DoI8R8T3oEWyUq+/IKiJBQAA">
-<XPD:ATTR name="Name" type="string">funcion</XPD:ATTR>
-<XPD:REF name="BehavioralFeature">Liv5h/uS4kuErD22ydi1FQAA</XPD:REF>
-<XPD:REF name="Type_">pePioy7rQUC9zg2M6tG25wAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="Xyekx5r8JkGP/BmXJeJx6wAA">
+<XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="aQaSAS8o70CsnTX2/a6nDAAA">
 <XPD:ATTR name="Name" type="string">bias</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">double</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">Liv5h/uS4kuErD22ydi1FQAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="VzvLLTsGr0Cw8R2oKmN94gAA">
+<XPD:ATTR name="Name" type="string">funcion</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">Liv5h/uS4kuErD22ydi1FQAA</XPD:REF>
+<XPD:REF name="Type_">pePioy7rQUC9zg2M6tG25wAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="Operations[1]" type="UMLOperation" guid="EcOUFP9vO0eb0GdjCwgWZQAA">
@@ -2418,10 +2408,11 @@
 <XPD:REF name="BehavioralFeature">fxe4ZzZJSUC1qxx9A7zOaQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:ATTR name="#TypedParameters" type="integer">3</XPD:ATTR>
+<XPD:ATTR name="#TypedParameters" type="integer">4</XPD:ATTR>
 <XPD:REF name="TypedParameters[0]">AfNQA/W2YEKaDx5QCxUatgAA</XPD:REF>
 <XPD:REF name="TypedParameters[1]">jzBcpH/6h0uN2aoDqv+kzgAA</XPD:REF>
 <XPD:REF name="TypedParameters[2]">nGy2x1Poiky93rokfiyvAwAA</XPD:REF>
+<XPD:REF name="TypedParameters[3]">VNiLZQvz4kivgu6BOuWuawAA</XPD:REF>
 <XPD:ATTR name="#Associations" type="integer">3</XPD:ATTR>
 <XPD:REF name="Associations[0]">dzHNuE7ltEq43NX6hLyp6gAA</XPD:REF>
 <XPD:REF name="Associations[1]">jVRtoWaZTEe9XlL6YQI95AAA</XPD:REF>
@@ -2494,16 +2485,21 @@
 <XPD:OBJ name="Operations[0]" type="UMLOperation" guid="lVZYi5F81kaq94JJ8zuXtgAA">
 <XPD:ATTR name="Name" type="string">crear</XPD:ATTR>
 <XPD:REF name="Owner">Y/mcS/OCakmXa0tDYDApTQAA</XPD:REF>
-<XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="nGy2x1Poiky93rokfiyvAwAA">
+<XPD:ATTR name="#Parameters" type="integer">3</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="VNiLZQvz4kivgu6BOuWuawAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">lVZYi5F81kaq94JJ8zuXtgAA</XPD:REF>
 <XPD:REF name="Type_">mOa5yMZGREC1SnUEY3lhagAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="3I4iyocIHU++7Q9pj7HHLAAA">
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="1CqMGL1mS0qjHFiGk7XTmgAA">
 <XPD:ATTR name="Name" type="string">bias</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">double</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">lVZYi5F81kaq94JJ8zuXtgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="EjKPKyqeXESe9628YFK0nAAA">
+<XPD:ATTR name="Name" type="string">funcion</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">lVZYi5F81kaq94JJ8zuXtgAA</XPD:REF>
+<XPD:REF name="Type_">pePioy7rQUC9zg2M6tG25wAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="Operations[1]" type="UMLOperation" guid="VyHi/9OpM0yy6X34srnAyQAA">
@@ -3282,15 +3278,19 @@
 </XPD:OBJ>
 <XPD:ATTR name="#TypedFeatures" type="integer">1</XPD:ATTR>
 <XPD:REF name="TypedFeatures[0]">08m7Ia2x4Eili7HayN5NiwAA</XPD:REF>
-<XPD:ATTR name="#TypedParameters" type="integer">8</XPD:ATTR>
+<XPD:ATTR name="#TypedParameters" type="integer">12</XPD:ATTR>
 <XPD:REF name="TypedParameters[0]">TIaXYPe1r0m7F8nL5/M6wwAA</XPD:REF>
 <XPD:REF name="TypedParameters[1]">H61u6YTJB0ymjg0EQSAz0AAA</XPD:REF>
 <XPD:REF name="TypedParameters[2]" pathname="funcion">piNiZsf1nEmaV/qnzI532wAA</XPD:REF>
 <XPD:REF name="TypedParameters[3]" pathname="funcion">URJwaaZhD0WMJmzjQYwyKQAA</XPD:REF>
 <XPD:REF name="TypedParameters[4]" pathname="funcion">44Ghp1F74ky4a4qrIMkUbgAA</XPD:REF>
-<XPD:REF name="TypedParameters[5]">+dOvlM7rmU2tikSrtoVxJAAA</XPD:REF>
-<XPD:REF name="TypedParameters[6]">DoI8R8T3oEWyUq+/IKiJBQAA</XPD:REF>
+<XPD:REF name="TypedParameters[5]" pathname="funcion">+dOvlM7rmU2tikSrtoVxJAAA</XPD:REF>
+<XPD:REF name="TypedParameters[6]" pathname="funcion">DoI8R8T3oEWyUq+/IKiJBQAA</XPD:REF>
 <XPD:REF name="TypedParameters[7]">zJmhqu6U6UKsRp/lpXVynAAA</XPD:REF>
+<XPD:REF name="TypedParameters[8]" pathname="funcion">36BcXUea6kWtkkZukVEvOQAA</XPD:REF>
+<XPD:REF name="TypedParameters[9]">KBJbAlwybUKP4GXyuZH+mwAA</XPD:REF>
+<XPD:REF name="TypedParameters[10]">EjKPKyqeXESe9628YFK0nAAA</XPD:REF>
+<XPD:REF name="TypedParameters[11]">VzvLLTsGr0Cw8R2oKmN94gAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[1]" type="UMLClass" guid="5JBsmiNTVES7mDx9EqlKygAA">
 <XPD:ATTR name="Name" type="string">Funcion</XPD:ATTR>
