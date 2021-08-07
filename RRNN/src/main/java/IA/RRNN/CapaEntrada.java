@@ -1,16 +1,15 @@
 //  @ Project : RRNN
-//  @ File Name : Red.java
+//  @ File Name : CapaEntrada.java
 //  @ Author : alonsete7,Hugo0133
 
 
 
-public class Red {
-	private String nombre;
-	public void new(String nombre, int numEntradas) {
+public class CapaEntrada extends Capa {
+	public void new() {
 	
 	}
 	
-	public String getNombre() {
+	public void new(int numEntradas) {
 	
 	}
 	
@@ -19,6 +18,10 @@ public class Red {
 	}
 	
 	public double[] retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje) {
+	
+	}
+	
+	public Neurona crear(double[] pesosSiguiente) {
 	
 	}
 }
