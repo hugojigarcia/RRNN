@@ -1,16 +1,12 @@
-//  @ Project : RRNN
-//  @ File Name : Funcion.java
-//  @ Author :  Hugo
-
-
 package IA.RRNN.PFuncion;
+
+//  @@ Project : RRNN
+//  @@ File Name : FuncionSigmoidal
+//  @@ Author : alonsete7,Hugo0133
 
 
 public class FuncionSigmoidal implements IFuncion {
-	//SINGLETON
-	private final static IFuncion INSTANCE = new FuncionSigmoidal();
-	public static IFuncion getInstance() { return INSTANCE; }
-	private FuncionSigmoidal() {}
+	public FuncionSigmoidal() {}
 	
 	public double aplicarFuncion(double valor) {
 		return 1/(1+ Math.pow(Math.E, -valor));

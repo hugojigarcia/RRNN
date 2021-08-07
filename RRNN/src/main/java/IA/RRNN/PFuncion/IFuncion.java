@@ -1,9 +1,8 @@
-//  @ Project : RRNN
-//  @ File Name : IFuncion.java
-//  @ Author :  Hugo
-
-
 package IA.RRNN.PFuncion;
+
+//@@ Project : RRNN
+//@@ File Name : IFuncion
+//@@ Author : alonsete7,Hugo0133
 
 
 public interface IFuncion {

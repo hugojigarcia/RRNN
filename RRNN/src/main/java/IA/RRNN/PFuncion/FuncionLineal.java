@@ -1,9 +1,8 @@
-//  @ Project : RRNN
-//  @ File Name : Funcion.java
-//  @ Author :  Hugo
-
-
 package IA.RRNN.PFuncion;
+
+//@@ Project : RRNN
+//@@ File Name : FuncionLineal
+//@@ Author : alonsete7,Hugo0133
 
 
 public class FuncionLineal implements IFuncion {

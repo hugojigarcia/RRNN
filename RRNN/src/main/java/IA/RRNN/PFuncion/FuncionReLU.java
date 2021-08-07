@@ -1,16 +1,12 @@
-//  @ Project : RRNN
-//  @ File Name : Funcion.java
-//  @ Author :  Hugo
-
-
 package IA.RRNN.PFuncion;
+
+//@@ Project : RRNN
+//@@ File Name : FuncionReLU
+//@@ Author : alonsete7,Hugo0133
 
 
 public class FuncionReLU implements IFuncion {
-	//SINGLETON
-	private final static IFuncion INSTANCE = new FuncionReLU();
-	public static IFuncion getInstance() { return INSTANCE; }
-	private FuncionReLU() {}
+	public FuncionReLU() {}
 	
 	public double aplicarFuncion(double valor) {
 		return Math.max(0, valor);

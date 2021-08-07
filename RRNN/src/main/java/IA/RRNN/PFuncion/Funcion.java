@@ -1,16 +1,12 @@
-//  @ Project : RRNN
-//  @ File Name : Funcion.java
-//  @ Author :  Hugo
-
-
 package IA.RRNN.PFuncion;
+
+//@@ Project : RRNN
+//@@ File Name : Funcion
+//@@ Author : alonsete7,Hugo0133
 
 
 public class Funcion implements IFuncion {
-	//SINGLETON
-	private final static IFuncion INSTANCE = new Funcion();
-	public static IFuncion getInstance() { return INSTANCE; }
-	private Funcion() {}
+	public Funcion() {}
 	
 	public double aplicarFuncion(double valor) {
 		//TODO
