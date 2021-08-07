@@ -1,48 +1,31 @@
-package IA.RRNN;
-
-import IA.RRNN.PFuncion.IFuncion;
-
 //  @ Project : RRNN
 //  @ File Name : Capa.java
-//  @ Author :  Hugo
+//  @ Author : alonsete7,Hugo0133
 
 
 
-public class Capa extends CapaBase {
-	private CapaBase anterior, siguiente;
-	private CNeurona cNeurona;
-	public Capa(int numNeuronas, IFuncion funcion, CapaBase anterior, CapaBase siguiente) {
-		//TODO
-		cNeurona = new CNeurona();
-		asignarAnterior(anterior);
-		asignarSiguiente(siguiente);
-	}
-	
-	@Override
+public abstract class Capa {
 	public double[] getSalida(double[] entradas) {
-		//TODO
-		return null;
+	
 	}
 	
-	@Override
 	public double[] retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje) {
-		//TODO
-		return null;
+	
 	}
 	
-	//RELACIÓN CAPA-CAPABASE(anterior)
-	public void asignarAnterior(CapaBase anterior) { 
-		if(anterior!=null) {
-			this.anterior=anterior;
-			
-		}
-	}
-	public CapaBase obtenerAnterior() { return anterior; }
+	public Neurona get(int numNeurona) {
 	
-	//RELACIÓN GENERADOR-CAPABASE(siguiente)
-	public void asignarSiguiente(CapaBase siguiente) { if(siguiente!=null) this.siguiente=siguiente; }
-	public CapaBase obtenerSiguiente() { return siguiente; }
-	//RELACIÓN CAPA-CNEURONA
-	public void asignarCNeurona(CNeurona cNeurona) { if(cNeurona!=null) this.cNeurona=cNeurona; }
-	public CNeurona obtenerCNeurona() { return cNeurona; }
+	}
+	
+	public Neurona borrar(int numNeurona) {
+	
+	}
+	
+	public double[] getSalida(double[] entradas) {
+	
+	}
+	
+	public double[] retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje) {
+	
+	}
 }

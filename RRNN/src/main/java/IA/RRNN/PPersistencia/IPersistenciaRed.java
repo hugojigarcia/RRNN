@@ -1,18 +1,29 @@
 //  @ Project : RRNN
 //  @ File Name : IPersistenciaRed.java
-//  @ Author :  Hugo
+//  @ Author : alonsete7,Hugo0133
 
 
-package IA.RRNN.PPersistencia;
+package PPersistencia;
 
-import IA.RRNN.Red;
 
-public interface IPersistenciaRed {
-	public void create(Red red);
+public class IPersistenciaRed {
+	public IPersistenciaRed getInstance() {
 	
-	public Red read(String nombre);
+	}
 	
-	public void update(Red red);
+	public void create(Red red) {
 	
-	public void delete(String nombre);
+	}
+	
+	public Red read(String nombre) {
+	
+	}
+	
+	public void update(Red red) {
+	
+	}
+	
+	public void delete(String nombre) {
+	
+	}
 }
