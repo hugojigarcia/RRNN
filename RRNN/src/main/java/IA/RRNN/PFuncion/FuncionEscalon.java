@@ -7,7 +7,6 @@ package IA.RRNN.PFuncion;
 
 
 public class FuncionEscalon implements IFuncion {
-	//SINGLETON
 	public FuncionEscalon() {}
 	
 	public double aplicarFuncion(double valor) {

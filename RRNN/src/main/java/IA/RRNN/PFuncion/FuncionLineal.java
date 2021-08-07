@@ -7,10 +7,7 @@ package IA.RRNN.PFuncion;
 
 
 public class FuncionLineal implements IFuncion {
-	//SINGLETON
-	private final static IFuncion INSTANCE = new FuncionLineal();
-	public static IFuncion getInstance() { return INSTANCE; }
-	private FuncionLineal() {}
+	public FuncionLineal() {}
 	
 	public double aplicarFuncion(double valor) {
 		return valor;
