@@ -6,6 +6,8 @@ package IA.RRNN;
 
 
 public class CapaEntrada extends Capa {
+	private Capa capaSiguiente;
+	
 	public CapaEntrada() {
 		//TODO
 	}
@@ -24,8 +26,12 @@ public class CapaEntrada extends Capa {
 		return null;
 	}
 	
-	public Neurona crear(double[] pesosSiguiente) {
+	public Neurona crearEntrada(double[] pesosSiguiente) {
 		//TODO
 		return null;
 	}
+	
+	//RELACION CAPAENTRADA-CAPA
+	public Capa obtenerCapaSiguiente() { return capaSiguiente; }
+	public void asignarCapaSiguiente(Capa capaSiguiente) { if(capaSiguiente!=null) this.capaSiguiente=capaSiguiente; }
 }

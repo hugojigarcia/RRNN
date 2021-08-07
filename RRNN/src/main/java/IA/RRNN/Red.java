@@ -7,8 +7,16 @@ package IA.RRNN;
 
 public class Red {
 	private String nombre;
-	public Red(String nombre, int numEntradas) {
+	private CCapa cCapa;
 	
+	public Red(String nombre) {
+		this.nombre=nombre;
+		cCapa = new CCapa();
+	}
+	
+	public Red(String nombre, int numEntradas) {
+		this.nombre=nombre;
+		cCapa = new CCapa(numEntradas);
 	}
 	
 	public String getNombre() { return nombre; }
@@ -22,4 +30,8 @@ public class Red {
 		//TODO
 		return null;
 	}
+	
+	//RELACIÓN RED-CCAPA
+	public CCapa obtenerCCapa() { return cCapa; }
+	public void asignarCCapa(CCapa cCapa) { if(cCapa!=null) this.cCapa=cCapa; }
 }

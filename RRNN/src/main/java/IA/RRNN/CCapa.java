@@ -1,17 +1,29 @@
 package IA.RRNN;
 
+import java.util.ArrayList;
+import java.util.List;
+
 //  @ Project : RRNN
 //  @ File Name : CCapa.java
 //  @ Author : alonsete7,Hugo0133
 
 
 public class CCapa {
+	private List<Capa> capas;
+	
 	public CCapa() {
-		//TODO
+		capas = new ArrayList<>();
+		CapaEntrada capaEntrada = new CapaEntrada();
+		CapaSalida capaSalida = new CapaSalida();
+		capaEntrada.asignarCapaSiguiente(capaSalida);
+		capaSalida.asignarCapaAnterior(capaEntrada);
+		capas.add(capaEntrada);
+		capas.add(capaSalida);
 	}
 	
 	public CCapa(int numEntradas) {
 		//TODO
+		this();
 	}
 	
 	public int getNumCapas() {
@@ -43,4 +55,5 @@ public class CCapa {
 		//TODO
 		return null;
 	}
+
 }

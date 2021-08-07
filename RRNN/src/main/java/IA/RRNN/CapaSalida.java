@@ -8,6 +8,8 @@ import IA.RRNN.PFuncion.IFuncion;
 
 
 public class CapaSalida extends Capa {
+	private Capa capaAnterior;
+	
 	public CapaSalida() {
 		//TODO
 	}
@@ -17,8 +19,12 @@ public class CapaSalida extends Capa {
 		return null;
 	}
 	
-	public Neurona crear(double bias, IFuncion funcion, double[] pesosAnterior) {
+	public Neurona crearNeurona(double bias, IFuncion funcion, double[] pesosAnterior) {
 		//TODO
 		return null;
 	}
+	
+	//RELACION CAPAOCULTA-CAPA(anterior)
+	public Capa obtenerCapaAnterior() { return capaAnterior; }
+	public void asignarCapaAnterior(Capa capaAnterior) { if(capaAnterior!=null) this.capaAnterior=capaAnterior; }
 }
