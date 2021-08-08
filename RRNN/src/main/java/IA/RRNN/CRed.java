@@ -20,16 +20,26 @@ public class CRed {
 		redes = new ArrayList<>();
 	}
 	
-	public Red crearRed(String nombre) {
-		Red aux = new Red(nombre);
-		redes.add(aux);
-		return aux;
+	public Red crearRed(String nombre) throws Exception {
+		try {
+			this.getRed(nombre);
+		} catch (Exception e) {
+			Red aux = new Red(nombre);
+			redes.add(aux);
+			return aux;
+		}
+		throw new Exception("Error: ya existe una red con este nombre");
 	}
 	
-	public Red crearRed(String nombre, int numEntradas) {
-		Red aux = new Red(nombre, numEntradas);
-		redes.add(aux);
-		return aux;
+	public Red crearRed(String nombre, int numEntradas) throws Exception {
+		try {
+			this.getRed(nombre);
+		} catch (Exception e) {
+			Red aux = new Red(nombre, numEntradas);
+			redes.add(aux);
+			return aux;
+		}
+		throw new Exception("Error: ya existe una red con este nombre");
 	}
 	
 	public Red getRed(String nombre) throws Exception{
