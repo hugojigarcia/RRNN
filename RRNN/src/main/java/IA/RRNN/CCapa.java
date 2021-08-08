@@ -9,41 +9,56 @@ import java.util.List;
 
 
 public class CCapa {
-	private List<Capa> capas;
+	private List<CapaOculta> capas;
+	private CapaEntrada capaEntrada;
 	
 	public CCapa() {
 		capas = new ArrayList<>();
-		CapaEntrada capaEntrada = new CapaEntrada();
-		CapaSalida capaSalida = new CapaSalida();
-		capaEntrada.asignarCapaSiguiente(capaSalida);
-		capaSalida.asignarCapaAnterior(capaEntrada);
-		capas.add(capaEntrada);
-		capas.add(capaSalida);
+		capaEntrada = new CapaEntrada();
+		CapaOculta capa = new CapaOculta(capaEntrada);
+		capas.add(capa);
+		capaEntrada.asignarCapaSiguiente(capa);
 	}
 	
 	public CCapa(int numEntradas) {
-		//TODO
-		this();
+		capas = new ArrayList<>();
+		capaEntrada = new CapaEntrada(numEntradas);
+		CapaOculta capa = new CapaOculta(capaEntrada);
+		capas.add(capa);
+		capaEntrada.asignarCapaSiguiente(capa);
 	}
 	
 	public int getNumCapas() {
-		//TODO
-		return 0;
+		return capas.size();
 	}
 	
 	public CapaOculta crearCapa() {
-		//TODO
-		return null;
+		CapaOculta ultimaCapa = capas.get(capas.size()-1);
+		CapaOculta capaNueva = new CapaOculta(ultimaCapa);
+		ultimaCapa.asignarCapaSiguiente(capaNueva);
+		capas.add(capaNueva);
+		return capaNueva;
 	}
 	
-	public CapaOculta getCapa(int numCapa) {
-		//TODO
-		return null;
+	public CapaOculta getCapa(int numCapa) throws Exception {
+		if(0 <= numCapa && numCapa < capas.size()) {
+			return capas.get(numCapa);
+		}
+		else
+			throw new Exception("Error: el número de capa no es válido.");
 	}
 	
-	public CapaOculta borrarUltimaCapa() {
-		//TODO
-		return null;
+	public void borrarUltimaCapa() throws Exception {
+		if(capas.size() > 1) {
+			CapaOculta ultimaCapa = capas.get(capas.size()-1 );
+			for(int i=0; i<ultimaCapa.getNumNeuronas(); i++) {
+				ultimaCapa.borrar(i);
+			}
+			((CapaOculta)ultimaCapa.obtenerCapaAnterior()).borrarCapaSiguiente();
+			capas.remove(ultimaCapa);
+		}
+		else
+			throw new Exception("Error: no se pueden borrar más capas.");
 	}
 	
 	public double[] getSalida(double[] entradas) {

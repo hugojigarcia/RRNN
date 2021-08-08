@@ -28,7 +28,7 @@ public class CRed {
 			redes.add(aux);
 			return aux;
 		}
-		throw new Exception("Error: ya existe una red con este nombre");
+		throw new Exception("Error: ya existe una red con este nombre.");
 	}
 	
 	public Red crearRed(String nombre, int numEntradas) throws Exception {
@@ -39,13 +39,13 @@ public class CRed {
 			redes.add(aux);
 			return aux;
 		}
-		throw new Exception("Error: ya existe una red con este nombre");
+		throw new Exception("Error: ya existe una red con este nombre.");
 	}
 	
 	public Red getRed(String nombre) throws Exception{
 		Iterator<Red> it = redes.iterator();
 		Red aux = null;
-		Boolean encontrado = false;
+		boolean encontrado = false;
 		while(it.hasNext() && !encontrado) {
 			aux = it.next();
 			encontrado = aux.getNombre().equals(nombre);				
@@ -53,7 +53,7 @@ public class CRed {
 		if(encontrado)
 			return aux;
 		else
-			throw new Exception("Error: no existe una red con ese nombre");
+			throw new Exception("Error: no existe una red con ese nombre.");
 	}
 	
 	public Red borrarRed(String nombre) throws Exception {
