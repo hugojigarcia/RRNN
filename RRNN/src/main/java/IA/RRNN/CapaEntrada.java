@@ -8,11 +8,8 @@ import IA.RRNN.PFuncion.FuncionLineal;
 
 
 public class CapaEntrada extends Capa {
-	private CapaOculta capaSiguiente;
-	
 	public CapaEntrada() {
 		super();
-		capaSiguiente = null;
 	}
 	
 	public CapaEntrada(int numEntradas) {
@@ -26,16 +23,16 @@ public class CapaEntrada extends Capa {
 	
 	public Neurona crearEntrada(double[] pesosSiguiente) throws Exception {
 		Neurona entrada = new Neurona(1, new FuncionLineal());
-		if(capaSiguiente!=null) {
-			if(pesosSiguiente==null || pesosSiguiente.length!=capaSiguiente.getNumNeuronas()) {
+		if(this.obtenerCapaSiguiente()!=null) {
+			if(pesosSiguiente==null || pesosSiguiente.length!=this.obtenerCapaSiguiente().getNumNeuronas()) {
 				throw new Exception("Error: el número de pesos no coincide con el número de neuronas de la siguiente capa");
 			}
 			for(int i=0;i<pesosSiguiente.length;i++) {
 				Peso peso = new Peso(pesosSiguiente[i]);
 				peso.asignarNeuronaAnterior(entrada);
-				peso.asignarNeuronaSiguiente(capaSiguiente.getNeurona(i));
+				peso.asignarNeuronaSiguiente(this.obtenerCapaSiguiente().getNeurona(i));
 				entrada.aniadirNeuronaSiguiente(peso);
-				capaSiguiente.getNeurona(i).aniadirNeuronaAnterior(peso);
+				this.obtenerCapaSiguiente().getNeurona(i).aniadirNeuronaAnterior(peso);
 			}
 		}
 		
@@ -54,8 +51,5 @@ public class CapaEntrada extends Capa {
 	}
 	
 	
-	//RELACION CAPAENTRADA-CAPA
-	public CapaOculta obtenerCapaSiguiente() { return capaSiguiente; }
-	public void asignarCapaSiguiente(CapaOculta capaSiguiente) { if(capaSiguiente!=null) this.capaSiguiente=capaSiguiente; }
-	public void borrarCapaSiguiente() { this.capaSiguiente = null; } 
+	
 }

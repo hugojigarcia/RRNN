@@ -15,17 +15,11 @@ public class CCapa {
 	public CCapa() {
 		capas = new ArrayList<>();
 		capaEntrada = new CapaEntrada();
-		CapaOculta capa = new CapaOculta(capaEntrada);
-		capas.add(capa);
-		capaEntrada.asignarCapaSiguiente(capa);
 	}
 	
 	public CCapa(int numEntradas) {
 		capas = new ArrayList<>();
 		capaEntrada = new CapaEntrada(numEntradas);
-		CapaOculta capa = new CapaOculta(capaEntrada);
-		capas.add(capa);
-		capaEntrada.asignarCapaSiguiente(capa);
 	}
 	
 	public int getNumCapas() {
@@ -33,7 +27,7 @@ public class CCapa {
 	}
 	
 	public CapaOculta crearCapa() {
-		CapaOculta ultimaCapa = capas.get(capas.size()-1);
+		Capa ultimaCapa = capas.size()==0?capaEntrada:capas.get(capas.size()-1);
 		CapaOculta capaNueva = new CapaOculta(ultimaCapa);
 		ultimaCapa.asignarCapaSiguiente(capaNueva);
 		capas.add(capaNueva);
@@ -49,16 +43,15 @@ public class CCapa {
 	}
 	
 	public void borrarUltimaCapa() throws Exception {
-		if(capas.size() > 1) {
+		if(capas.size() > 0) {
 			CapaOculta ultimaCapa = capas.get(capas.size()-1 );
 			for(int i=0; i<ultimaCapa.getNumNeuronas(); i++) {
 				ultimaCapa.borrar(i);
 			}
-			((CapaOculta)ultimaCapa.obtenerCapaAnterior()).borrarCapaSiguiente();
+			ultimaCapa.obtenerCapaAnterior().borrarCapaSiguiente();
 			capas.remove(ultimaCapa);
 		}
-		else
-			throw new Exception("Error: no se pueden borrar más capas.");
+		else throw new Exception("Error: no hay más capas para borrar.");
 	}
 	
 	public double[] getSalida(double[] entradas) {

@@ -24,21 +24,21 @@ public class PersistenciaRed implements IPersistenciaRed {
 		FileWriter writer = new FileWriter(ruta, false);
 		
 		//ESCRITURA DATOS GENERALES RED
-		writer.write(red.getNombre());
+		writer.write(red.getNombre()+"\n");
 		CCapa cCapa = red.obtenerCCapa();
-		writer.write(cCapa.obtenerCapaEntrada().getNumNeuronas());
+		writer.write(cCapa.obtenerCapaEntrada().getNumNeuronas()+"\n");
 		
 		for(int i=0;i<cCapa.getNumCapas();i++) {
 			//ESCRITURA DATOS CAPA
 			CapaOculta capaAux = cCapa.getCapa(i);
-			writer.write(capaAux.getNumNeuronas());
+			writer.write(capaAux.getNumNeuronas()+"\n");
 			
 			for(int j=0; j<capaAux.getNumNeuronas();j++) {
 				//ESCRITURA DATOS NEURONA
 				Neurona neuronaAux = capaAux.getNeurona(j);
-				writer.write(""+neuronaAux.getBias());
-				writer.write(neuronaAux.obtenerFuncion().getNombre());
-				writer.write(convertirPesosALinea(neuronaAux, capaAux.obtenerCapaAnterior().getNumNeuronas()));
+				writer.write(""+neuronaAux.getBias()+"\n");
+				writer.write(neuronaAux.obtenerFuncion().getNombre()+"\n");
+				writer.write(convertirPesosALinea(neuronaAux, capaAux.obtenerCapaAnterior().getNumNeuronas())+"\n");
 			}
 		}
 		

@@ -10,9 +10,11 @@ import java.util.List;
 
 public abstract class Capa {
 	private List<Neurona> neuronas;
+	private CapaOculta capaSiguiente;
 	
 	public Capa() {
 		neuronas = new ArrayList<>();
+		capaSiguiente=null;
 	}
 	
 	
@@ -43,4 +45,9 @@ public abstract class Capa {
 	public void borrarNeurona(int numNeurona) throws Exception {
 		neuronas.remove(this.getNeurona(numNeurona));
 	}
+	
+	//RELACION CAPA-CAPAOCULTA(siguiente)
+	public CapaOculta obtenerCapaSiguiente() { return capaSiguiente; }
+	public void asignarCapaSiguiente(CapaOculta capaSiguiente) { if(capaSiguiente!=null) this.capaSiguiente=capaSiguiente; }
+	public void borrarCapaSiguiente() { this.capaSiguiente = null; } 
 }

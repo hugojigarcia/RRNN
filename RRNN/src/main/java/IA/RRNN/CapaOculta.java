@@ -8,19 +8,19 @@ import IA.RRNN.PFuncion.IFuncion;
 
 
 public class CapaOculta extends Capa {
-	private Capa capaAnterior, capaSiguiente;
+	private Capa capaAnterior;
 	
 	public CapaOculta(Capa capaAnterior) {
 		super();
 		this.capaAnterior = capaAnterior;
 		//TODO excepcion
-		this.capaSiguiente = null;
 	}
 
 	
 	public Neurona crearNeurona(double bias, IFuncion funcion, double[] pesosAnterior, double[] pesosSiguiente) throws Exception {
 		Neurona neurona = new Neurona(bias, funcion);
 		//Enlazar con la capa anterior
+		
 		if(pesosAnterior==null || pesosAnterior.length!=capaAnterior.getNumNeuronas()) {
 			throw new Exception("Error: el número de pesos anteriores no coincide con el número de neuronas de la anterior capa");
 		}
@@ -33,16 +33,16 @@ public class CapaOculta extends Capa {
 		}
 		
 		//Enlazar con la capa siguinte
-		if(capaSiguiente!=null) {
-			if(pesosSiguiente==null || pesosSiguiente.length!=capaSiguiente.getNumNeuronas()) {
+		if(this.obtenerCapaSiguiente()!=null) {
+			if(pesosSiguiente==null || pesosSiguiente.length!=this.obtenerCapaSiguiente().getNumNeuronas()) {
 				throw new Exception("Error: el número de pesos siguientes no coincide con el número de neuronas de la siguiente capa");
 			}
 			for(int i=0;i<pesosSiguiente.length;i++) {
 				Peso peso = new Peso(pesosSiguiente[i]);
 				peso.asignarNeuronaAnterior(neurona);
-				peso.asignarNeuronaSiguiente(capaSiguiente.getNeurona(i));
+				peso.asignarNeuronaSiguiente(this.obtenerCapaSiguiente().getNeurona(i));
 				neurona.aniadirNeuronaSiguiente(peso);
-				capaSiguiente.getNeurona(i).aniadirNeuronaAnterior(peso);
+				this.obtenerCapaSiguiente().getNeurona(i).aniadirNeuronaAnterior(peso);
 			}
 		}
 		
@@ -66,8 +66,4 @@ public class CapaOculta extends Capa {
 	public Capa obtenerCapaAnterior() { return capaAnterior; }
 	public void asignarCapaAnterior(Capa capaAnterior) { if(capaAnterior!=null) this.capaAnterior=capaAnterior; }
 	public void borrarCapaAnterior() { this.capaAnterior = null; }
-	//RELACION CAPAOCULTA-CAPA(siguiente)
-	public Capa obtenerCapaSiguiente() { return capaSiguiente; }
-	public void asignarCapaSiguiente(Capa capaSiguiente) { if(capaSiguiente!=null) this.capaSiguiente=capaSiguiente; }
-	public void borrarCapaSiguiente() { this.capaSiguiente = null; }
 }
