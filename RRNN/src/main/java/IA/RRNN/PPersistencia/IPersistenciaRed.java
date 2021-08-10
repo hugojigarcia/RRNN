@@ -12,9 +12,9 @@ import IA.RRNN.Red;
 public interface IPersistenciaRed {
 	public void create(Red red, String rutaDirectorio) throws Exception;
 	
-	public Red read(String rutaArchivo) throws IOException;
+	public Red read(String rutaArchivo) throws Exception;
 	
-	public void update(Red red, String rutaArchivo);
+	public void update(Red red, String rutaArchivo) throws Exception;
 	
-	public void delete(String rutaArchivo);
+	public void delete(String rutaArchivo) throws Exception;
 }
