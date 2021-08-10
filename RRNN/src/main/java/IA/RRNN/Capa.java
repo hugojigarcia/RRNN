@@ -15,12 +15,6 @@ public abstract class Capa {
 		neuronas = new ArrayList<>();
 	}
 	
-	public Neurona get(int numNeurona) throws Exception {
-		if(0 <= numNeurona && numNeurona < getNumNeuronas())
-			return neuronas.get(numNeurona);
-		else
-			throw new Exception("Error: número de neurona no válido.");
-	}
 	
 	public int getNumNeuronas() {
 		return neuronas.size();
@@ -36,4 +30,17 @@ public abstract class Capa {
 	public abstract double[] getSalida(double[] entradas);
 	
 	public abstract double[] retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje);
+	
+	//RELACION CAPA-NEURONA
+	public Neurona getNeurona(int numNeurona) throws Exception {
+		if(0 <= numNeurona && numNeurona < getNumNeuronas())
+			return neuronas.get(numNeurona);
+		else
+			throw new Exception("Error: número de neurona no válido.");
+	}
+	
+	public void aniadirNeurona(Neurona neurona) { if(neurona!=null) neuronas.add(neurona); }
+	public void borrarNeurona(int numNeurona) throws Exception {
+		neuronas.remove(this.getNeurona(numNeurona));
+	}
 }

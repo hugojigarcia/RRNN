@@ -9,14 +9,11 @@ public class Peso {
 	private double peso;
 	private Neurona neuronaAnterior, neuronaSiguiente;
 	public Peso(double peso) {
-		//TODO
+		setPeso(peso);
 	}
 	
 	public double getPeso() { return peso; }
-	
-	public void setPeso(double peso) {
-		//TODO
-	}
+	public void setPeso(double peso) { this.peso=peso; }
 	
 	
 	//RELACION PESO-NEURONA(anterior)
