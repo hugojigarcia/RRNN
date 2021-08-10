@@ -29,4 +29,10 @@ public class Funcion implements IFuncion {
 		for(int i=0;i<valores.length;i++) resultado[i] = this.aplicarDerivada(valores[i]);
 		return resultado;
 	}
+
+	@Override
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

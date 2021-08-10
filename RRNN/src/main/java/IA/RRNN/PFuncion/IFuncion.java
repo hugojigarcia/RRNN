@@ -6,6 +6,8 @@ package IA.RRNN.PFuncion;
 
 
 public interface IFuncion {
+	public String getNombre();
+	
 	public double aplicarFuncion(double valor) throws Exception;
 	
 	public double[] aplicarFuncion(double[] valores) throws Exception;

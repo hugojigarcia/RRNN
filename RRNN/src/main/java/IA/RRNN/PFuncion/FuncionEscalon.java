@@ -27,4 +27,9 @@ public class FuncionEscalon implements IFuncion {
 		for(int i=0;i<valores.length;i++) resultado[i] = this.aplicarDerivada(valores[i]);
 		return resultado;
 	}
+
+	@Override
+	public String getNombre() {
+		return "Escalon";
+	}
 }
