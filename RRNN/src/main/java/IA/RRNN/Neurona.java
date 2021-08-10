@@ -16,7 +16,7 @@ public class Neurona {
 	private List<Peso> neuronasAnteriores, neuronasSiguientes;
 	
 	public Neurona(double bias, IFuncion funcion) throws Exception {
-		this.setFuncion(funcion);
+		this.asignarFuncion(funcion);
 		this.bias=bias;
 		neuronasAnteriores = new ArrayList<>();
 		neuronasSiguientes = new ArrayList<>();
@@ -61,8 +61,8 @@ public class Neurona {
 	}
 	
 	//RELACION NEURONA-IFUNCION
-	public IFuncion getFuncion() { return funcion; }
-	public void setFuncion(IFuncion funcion) throws Exception { 
+	public IFuncion obtenerFuncion() { return funcion; }
+	public void asignarFuncion(IFuncion funcion) throws Exception { 
 		if(funcion==null) throw new Exception("Error: parámetro nulo");
 		else this.funcion=funcion;
 	}
