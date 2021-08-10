@@ -27,4 +27,16 @@ public class CapaSalida extends Capa {
 	//RELACION CAPAOCULTA-CAPA(anterior)
 	public Capa obtenerCapaAnterior() { return capaAnterior; }
 	public void asignarCapaAnterior(Capa capaAnterior) { if(capaAnterior!=null) this.capaAnterior=capaAnterior; }
+
+	@Override
+	public double[] getSalida(double[] entradas) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public double[] retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
