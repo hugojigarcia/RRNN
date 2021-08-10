@@ -70,5 +70,12 @@ public class CCapa {
 		//TODO
 		return null;
 	}
+	
+	//RELACION CCAPA-CAPAENTRADA
+	public CapaEntrada obtenerCapaEntrada() { return capaEntrada; }
+	public void asignarCapaEntrada(CapaEntrada capaEntrada) throws Exception { 
+		if(capaEntrada==null) throw new Exception("Error: parámetro nulo");
+		else this.capaEntrada=capaEntrada;
+	}
 
 }
