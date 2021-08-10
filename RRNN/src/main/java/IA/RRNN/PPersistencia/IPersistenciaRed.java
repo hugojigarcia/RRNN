@@ -1,5 +1,7 @@
 package IA.RRNN.PPersistencia;
 
+import java.io.IOException;
+
 import IA.RRNN.Red;
 
 //  @ Project : RRNN
@@ -8,11 +10,11 @@ import IA.RRNN.Red;
 
 
 public interface IPersistenciaRed {
-	public void create(Red red);
+	public void create(Red red, String rutaDirectorio) throws Exception;
 	
-	public Red read(String nombre);
+	public Red read(String rutaArchivo) throws IOException;
 	
-	public void update(Red red);
+	public void update(Red red, String rutaArchivo);
 	
-	public void delete(String nombre);
+	public void delete(String rutaArchivo);
 }
