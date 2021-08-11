@@ -50,6 +50,9 @@ public class CapaEntrada extends Capa {
 		return null;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "NÚMERO DE ENTRADAS: " + this.getNumNeuronas() + "\n";
+	}
 	
 }

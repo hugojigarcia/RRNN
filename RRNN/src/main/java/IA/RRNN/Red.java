@@ -32,4 +32,9 @@ public class Red {
 	//RELACIÓN RED-CCAPA
 	public CCapa obtenerCCapa() { return cCapa; }
 	public void asignarCCapa(CCapa cCapa) { if(cCapa!=null) this.cCapa=cCapa; }
+	
+	@Override
+	public String toString() {
+		return "NOMBRE RED: " + nombre + "\n" + cCapa.toString();
+	}
 }

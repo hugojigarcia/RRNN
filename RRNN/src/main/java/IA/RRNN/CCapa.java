@@ -77,4 +77,12 @@ public class CCapa {
 		else this.capaEntrada=capaEntrada;
 	}
 
+	@Override
+	public String toString() {
+		String resultado = capaEntrada.toString();
+		for(int i=0; i<capas.size(); i++) {
+			resultado += "CAPA " + i + ": \n" + capas.get(i).toString();
+		}
+		return resultado;
+	}
 }

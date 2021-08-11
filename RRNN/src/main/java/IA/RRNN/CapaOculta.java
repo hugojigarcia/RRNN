@@ -78,4 +78,17 @@ public class CapaOculta extends Capa {
 	public Capa obtenerCapaAnterior() { return capaAnterior; }
 	public void asignarCapaAnterior(Capa capaAnterior) { if(capaAnterior!=null) this.capaAnterior=capaAnterior; }
 	public void borrarCapaAnterior() { this.capaAnterior = null; }
+	
+	@Override
+	public String toString() {
+		String resultado = "";
+		for(int i=0; i<this.getNumNeuronas(); i++) {
+			try {
+				resultado += "\tNEURONA " + i + ": \n" + this.getNeurona(i).toString();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return resultado;
+	}
 }

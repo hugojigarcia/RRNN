@@ -70,4 +70,17 @@ public class Neurona {
 		if(funcion==null) throw new Exception("Error: parámetro nulo");
 		else this.funcion=funcion;
 	}
+	
+	@Override
+	public String toString() {
+		String resultado = "\t\tBIAS: " + bias + " / FUNCIÓN DE ACTIVACIÓN: " + funcion.getNombre() + "\n";
+		for(int i=0; i<this.neuronasAnteriores.size(); i++) {
+			try {
+				resultado += "\t\tPESO " + i + ": "+ this.neuronasAnteriores.get(i).getPeso() + "\n";
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return resultado;
+	}
 }

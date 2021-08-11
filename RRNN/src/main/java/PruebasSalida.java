@@ -21,10 +21,12 @@ public class PruebasSalida {
 		CapaOculta capa2 = red.obtenerCCapa().crearCapa();
 		capa2.crearNeurona(1, new FuncionSigmoidal(), new double[] {2.5, -3.5}, null);
 		
-		double[] salidas = red.getSalida(new double[] {0.2, 0.7});
-		for(double salida: salidas) {
-			System.out.print(salida+ ", ");
-		}
+		System.out.println(red);
+		
+//		double[] salidas = red.getSalida(new double[] {0.2, 0.7});
+//		for(double salida: salidas) {
+//			System.out.print(salida+ ", ");
+//		}
 		
 		
 		
