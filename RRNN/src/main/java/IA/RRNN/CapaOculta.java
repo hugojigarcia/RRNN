@@ -53,6 +53,7 @@ public class CapaOculta extends Capa {
 	}
 	
 	public double[] getSalida(double[] entradas) throws Exception {
+		if(this.getNumNeuronas() == 0) throw new Exception("Error: no hay neuronas en esta capa");
 		if(entradas.length != this.obtenerCapaAnterior().getNumNeuronas()) throw new Exception("Error: el número de entradas no coincide con el número de neuronas de esta capa");
 		double[] salidas = new double[this.getNumNeuronas()];
 		HiloMultiplicador[] hilosMultiplicadores = new HiloMultiplicador[this.getNumNeuronas()];
