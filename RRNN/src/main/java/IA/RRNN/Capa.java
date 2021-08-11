@@ -29,7 +29,7 @@ public abstract class Capa {
 			throw new Exception("Error: número de neurona no válido.");
 	}
 	
-	public abstract double[] getSalida(double[] entradas);
+	public abstract double[] getSalida(double[] entradas) throws Exception;
 	
 	public abstract double[] retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje);
 	

@@ -25,14 +25,18 @@ public class Neurona {
 	public double getBias() { return bias; }
 	public void setBias(double bias) { this.bias=bias;}
 	
-	public double[] getSalida(double[] entradas) {
-		//TODO
-		return null;
+	public double getSalida(double[] entradas) throws Exception {
+		if(entradas.length != neuronasAnteriores.size()) throw new Exception("Error: el número de entradas no coincide con el número de neuronas de la capa anterior");
+		double salida = bias;
+		for(int i=0; i<entradas.length; i++) {
+			salida += entradas[i] * neuronasAnteriores.get(i).getPeso();
+		}
+		return funcion.aplicarFuncion(salida);
 	}
 	
-	public double[] retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje) {
+	public double retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje) {
 		//TODO
-		return null;
+		return 0;
 	}
 	
 	//RELACION NEURONA-NEURONA(anteriores)

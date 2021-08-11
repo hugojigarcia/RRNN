@@ -52,9 +52,22 @@ public class CapaOculta extends Capa {
 		
 	}
 	
-	public double[] getSalida(double[] entradas) {
-		//TODO
-		return null;
+	public double[] getSalida(double[] entradas) throws Exception {
+		if(entradas.length != this.obtenerCapaAnterior().getNumNeuronas()) throw new Exception("Error: el número de entradas no coincide con el número de neuronas de esta capa");
+		double[] salidas = new double[this.getNumNeuronas()];
+		Thread[] threads = new Thread[this.getNumNeuronas()];
+		HiloMultiplicador[] hilosMultiplicadores = new HiloMultiplicador[this.getNumNeuronas()];
+		for(int i=0; i<this.getNumNeuronas(); i++) {
+			hilosMultiplicadores[i] = new HiloMultiplicador(this.getNeurona(i), entradas);
+			threads[i] = new Thread(hilosMultiplicadores[i]);
+			threads[i].start();
+		}
+		for(int i=0; i<this.getNumNeuronas(); i++) {
+			threads[i].join();
+			salidas[i] = hilosMultiplicadores[i].getSalida();
+			System.out.println("salida capa: " + salidas[i]); // BORRAR
+		}
+		return salidas;
 	}
 	
 	public double[] retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje) {

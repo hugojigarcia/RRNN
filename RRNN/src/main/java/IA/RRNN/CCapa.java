@@ -54,9 +54,15 @@ public class CCapa {
 		else throw new Exception("Error: no hay más capas para borrar.");
 	}
 	
-	public double[] getSalida(double[] entradas) {
-		//TODO
-		return null;
+	public double[] getSalida(double[] entradas) throws Exception {
+		if(entradas.length != capaEntrada.getNumNeuronas()) throw new Exception("Error: el número de entradas no coincide el número de entradas de la red");
+		else {
+			double[] salidas = entradas;
+			for(CapaOculta capa: capas) {
+				salidas = capa.getSalida(salidas);
+			}
+			return salidas;
+		}
 	}
 	
 	public double[] retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje) {

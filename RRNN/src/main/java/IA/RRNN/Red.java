@@ -21,14 +21,12 @@ public class Red {
 	
 	public String getNombre() { return nombre; }
 	
-	public double[] getSalida(double[] entradas) {
-		//TODO
-		return null;
+	public double[] getSalida(double[] entradas) throws Exception {
+		return cCapa.getSalida(entradas);
 	}
 	
 	public double[] retropropagar(double[] entradas, double[] salidasDeseadas, double factorAprendizaje) {
-		//TODO
-		return null;
+		return cCapa.retropropagar(entradas, salidasDeseadas, factorAprendizaje);
 	}
 	
 	//RELACIÓN RED-CCAPA
