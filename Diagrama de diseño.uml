@@ -251,7 +251,7 @@
 <XPD:REF name="Model">pePioy7rQUC9zg2M6tG25wAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="oRyH9ybmWkqaD+DlyZuQ4gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="OGwSAcTI6kanrtgdCRmyQAAA">
-<XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="FontStyle" type="integer">3</XPD:ATTR>
 <XPD:ATTR name="Text" type="string">IFuncion</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="gIJULuURSkCxhIZ82JG2fwAA">
@@ -1950,12 +1950,12 @@
 <XPD:ATTR name="Name" type="string">getSalida</XPD:ATTR>
 <XPD:REF name="Owner">mOa5yMZGREC1SnUEY3lhagAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="XxOHmf9D0EG4BwpJzmI4DQAA">
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="kgRbl6yZeECWSIgnbQdJZwAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">double[]</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">double</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">Y++sCccUeUaOgL7Lmo4FLwAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="r4spjGCAf0Ojtu7iM7mzpgAA">
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="EtOFR06wGE2TUjGgm3w2lAAA">
 <XPD:ATTR name="Name" type="string">entradas</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">double[]</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">Y++sCccUeUaOgL7Lmo4FLwAA</XPD:REF>
@@ -1965,22 +1965,22 @@
 <XPD:ATTR name="Name" type="string">retropropagar</XPD:ATTR>
 <XPD:REF name="Owner">mOa5yMZGREC1SnUEY3lhagAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">4</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="qKKC+KDOs0WdARmY1+CuTgAA">
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="7XESV1DixEC+xyUjL80NswAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">double[]</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">double</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">fxe4ZzZJSUC1qxx9A7zOaQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="FiCjHudyQkyanSsprMP6jwAA">
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="cUtb3TWqGk+dF2IBKaMZKgAA">
 <XPD:ATTR name="Name" type="string">entradas</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">double[]</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">fxe4ZzZJSUC1qxx9A7zOaQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="eVyuiSXl+USfqIotGlvAvAAA">
+<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="rMxdPvmbEUq2lZwrL9GxSgAA">
 <XPD:ATTR name="Name" type="string">salidasDeseadas</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">double[]</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">fxe4ZzZJSUC1qxx9A7zOaQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[3]" type="UMLParameter" guid="Gc9KssfarEeYx2ul0JKBfAAA">
+<XPD:OBJ name="Parameters[3]" type="UMLParameter" guid="C32ans3ve0mcoNYtov1t9QAA">
 <XPD:ATTR name="Name" type="string">factorAprendizaje</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">double</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">fxe4ZzZJSUC1qxx9A7zOaQAA</XPD:REF>
