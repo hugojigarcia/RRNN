@@ -23,5 +23,6 @@ public class HiloMultiplicador extends Thread{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		System.out.println(this.getName()); //BORRAR
 	}
 }
