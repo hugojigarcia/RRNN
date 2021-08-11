@@ -32,4 +32,5 @@ public class FuncionEscalon implements IFuncion {
 	public String getNombre() {
 		return "Escalon";
 	}
+	
 }
