@@ -7,8 +7,8 @@ public class FactoryFunciones {
 	public static FactoryFunciones getInstance() { return INSTANCE; }
 	private FactoryFunciones() {}
 	
-	public IFuncion crearFuncion(String nombre) throws Exception {
-		switch (nombre.toLowerCase()) {
+	public IFuncion factoryMethod(String nombreFuncion) throws Exception {
+		switch (nombreFuncion.toLowerCase()) {
 			case "escalon": return new FuncionEscalon(); 
 			case "escalón": return new FuncionEscalon(); 
 			case "lineal": return new FuncionLineal();

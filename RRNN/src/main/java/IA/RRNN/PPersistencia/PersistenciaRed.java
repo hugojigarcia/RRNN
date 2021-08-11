@@ -73,7 +73,7 @@ public class PersistenciaRed implements IPersistenciaRed {
 				double bias = Double.parseDouble(bufferedReader.readLine()); //BIAS
 				linea=bufferedReader.readLine(); //NOMBRE FUNCION
 				double[] pesosAnterior = convertirLineaAPesos(bufferedReader.readLine()); //PESOS CON CAPA ANTERIOR
-				capa.crearNeurona(bias, FactoryFunciones.getInstance().crearFuncion(linea), pesosAnterior,null);
+				capa.crearNeurona(bias, FactoryFunciones.getInstance().factoryMethod(linea), pesosAnterior,null);
 			}
 			
 			linea=bufferedReader.readLine();
